@@ -13,41 +13,25 @@
     <link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
     <title>Instagram</title>
     <style>
-        * {
-            font-family: "Roboto", Helvetica, Arial, sans-serif;
-        }
-        p {
+        * {/*** General Settings ***/
             font-family: "Segoe UI";
         }
-        img {
-            max-height: 100%;
-            max-width: 100%; 
-            object-fit: cover;
+        body {/*** General Settings ***/
+            background-color: rgba(var(--b3f,250,250,250),1);
         }
-        #logo {
-            cursor: pointer;
-            margin-left: 1.2rem;
+        ::placeholder {/* Search Bar Background Text */
+            text-align: center;
+            font-size: 14px;
         }
-        #profile {
-            background-color: black;
-            width: 2rem;
-            border-radius: 50%;
-            cursor: pointer
-        }
-        nav {
+        nav {/*** Nav Bar Start ***/
             height: 54px;
             border-bottom: 1px solid rgb(219,219,219);
         }
-        .nav-item {
-            background-color: transparent;
-            border: none;
+        #logo {/* Instagram Logo */
+            cursor: pointer;
+            margin-left: 1.2rem;
         }
-        span i{
-            font-size: 1.6rem;
-            color: #1a1a1a;
-            opacity: 0.9;
-        }
-        #search-bar {
+        #search-bar {/* Search Input */
             padding: 3px 10px 3px 26px;
             border-radius: 3px;
             outline: 0;
@@ -57,30 +41,51 @@
             background-color: rgb(250,250,250);
             font-family: "Segoe UI" sans-serif;
         }
-
-        ::placeholder {
-            text-align: center;
+        #navIcons {/* Nav Buttons */
+            width: 1.6rem;
         }
-        #story-photo {
-            width: 56px;
-            height: 56px;
+        #navIcons1 {/* Nav Buttons */
+            width: 2rem;
+        }
+        #navIcons2 {/* Nav Buttons */
+            width: 1.4rem;
+        }
+        .nav-item {/* Nav Buttons */
+            background-color: transparent;
+            border: none;
+        }
+        #profile {/* Profile Photo */
+            width: 1.4rem;
+            height: 1.4rem;
             border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+        }/*** Nav Bar End ***/
+        #storySide {/*** Story Side Start ***/
+            overflow: hidden;
             position: relative;
+            margin-top: 4.8rem;
+
+        }
+        #story-photo {/* Story Profile Photo */
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
             background: linear-gradient(to right, red, purple);
             padding: 3px;
             cursor: pointer;
+            object-fit: cover;
         }
-        label {
+        label {/* Story Username */
             font-size: 12px;
+            color: #262626;
             overflow: hidden;
             display: block;
             max-width: 3.6rem;
             max-height: 1rem;
             cursor: pointer;
         }
-        body {
-            background-color: rgba(var(--b3f,250,250,250),1);
-        }
+
         #post-profile {
             width: 32px;
             height: 32px;
@@ -94,9 +99,7 @@
             object-fit: cover;
         }
 
-        aside {
-            overflow:hidden;
-        }
+
         #post-nick {
             text-transform: lowercase;
             font-weight: 600;
@@ -230,27 +233,28 @@
     </style>
   </head>
   <body">
-      <nav class="navbar bg-white">
+      <nav class="navbar bg-white fixed-top">
             <div class="container">
                 <div class="row col-md-12 offset-1">
                     <div class="col-4 mt-2 ps-5"><img id="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt=""></div>
-                    <div class="col-2 mt-1"><input id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></div>
-                    <div class="col-4 offset-1">
-                        <button class="nav-item"><span><i class="fas fa-home"></i></span></button>
-                        <button class="nav-item"><span><i class="fab fa-facebook-messenger"></i></span></button>
-                        <button class="nav-item"><span><i class="far fa-plus-square"></i></span></button>
-                        <button class="nav-item"><span><i class="far fa-compass"></i></span></button>
-                        <button class="nav-item"><span><i class="far fa-heart"></i></span></button>
-                        <img class="mb-2" id="profile" src="data:image/jpeg;base64,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" alt="">
+                    <div class="col-2 mt-1">
+                        <input id="search-bar" class="form-control" type="search" placeholder="Search"></div>
+                    <div class="col-4 offset-1 d-flex align-items-center gap-2">
+                        <button class="nav-item"><img id="navIcons1" src="https://cdn.iconscout.com/icon/free/png-64/home-1779425-1512882.png" alt=""> </button>
+                        <button class="nav-item"><img id="navIcons2" src="https://cdn.iconscout.com/icon/free/png-64/social-151-95512.png" alt=""> </button>
+                        <button class="nav-item"><img id="navIcons" src="https://cdn.iconscout.com/icon/premium/png-64-thumb/add-3661079-3095297.png" alt=""> </button>
+                        <button class="nav-item"><img id="navIcons" src="https://cdn.iconscout.com/icon/premium/png-64-thumb/compass-107-108672.png" alt=""> </button>
+                        <button class="nav-item"><img id="navIcons" src="https://cdn.iconscout.com/icon/free/png-64/heart-1121-433832.png" alt=""> </button>
+                        <img class="ms-2" id="profile" src="https://images.pexels.com/photos/3748221/pexels-photo-3748221.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                     </div>
                 </div>
             </div>
       </nav>
       <main class="container">
         <div class="row">
-            <aside class="col-md-6 mt-4 offset-2 ">
-                <div class="border col-md-12 p-3 bg-white">
-                      <ul class="list-unstyled d-flex">
+            <aside class="col-md-6 offset-2">
+                <div id="storySide" class="border col-md-12 p-3 bg-white">
+                      <ul class="list-unstyled d-flex mt-1 mb-0">
                           <li class="col">
                               <img id="story-photo" src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
                               <label class="d-flex" for="">liam_smith</label>
@@ -489,5 +493,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
     <script src="https://kit.fontawesome.com/d7bc1b3658.js" crossorigin="anonymous"></script>
+    <script>
+    </script>
   </body>
 </html>
+<div class="LWmhU _0aCwM"><input autocapitalize="none" class="XTCLo x3qfX" placeholder="Search" type="text" value=""><div class="pbgfb Di7vw " role="button" tabindex="0"><div class="eyXLr wUAXj "><span class="_6RZXI coreSpriteSearchIcon"></span><span class="TqC_a">Search</span></div></div><div class="yPP5B"></div></div>
