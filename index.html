@@ -9,254 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/segoe-ui-7" rel="stylesheet">
     <title>Instagram</title>
     <link rel="icon" href="https://cdn-icons.flaticon.com/png/128/3938/premium/3938036.png?token=exp=1635497591~hmac=5e9f970df6141570ffc3a294b5a919b0">
-    <style>
-        * {/*** General Settings ***/
-            font-family: "Segoe UI";
-        }
-        body {/*** General Settings ***/
-            background-color: rgba(var(--b3f,250,250,250),1);
-        }
-        #weight-600 {
-            font-weight: 600;
-            cursor: pointer;
-        }
-        ::placeholder {/* Search Bar Background Text */
-            text-align: center;
-            font-size: 14px;
-        }
-        nav {/*** Nav Bar Start ***/
-            height: 54px;
-            border-bottom: 1px solid rgb(219,219,219);
-        }
-        #logo {/* Instagram Logo */
-            cursor: pointer;
-            margin-left: 1.2rem;
-        }
-        #search-bar {/* Search Input */
-            padding: 3px 10px 3px 26px;
-            border-radius: 3px;
-            outline: 0;
-            width: 215px;
-            height: 28px;
-            padding: 3px 10px 3px 26px;
-            background-color: rgb(250,250,250);
-            font-family: "Segoe UI" sans-serif;
-        }
-        .nav-item {/* Nav Buttons */
-            background-color: transparent;
-            border: none;
-        }
-        #profile {/* Profile Photo */
-            width: 1.4rem;
-            height: 1.4rem;
-            border-radius: 50%;
-            cursor: pointer;
-            object-fit: cover;
-        }/*** Nav Bar End ***/
-
-        #storySide {/*** Story Side Start ***/
-            overflow: hidden;
-            position: relative;
-            margin-top: 4.8rem;
-        }
-        #story-photo {/* Story Profile Photo */
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            border: 2px solid rgb(238, 39, 82);
-            padding: 1px;
-            cursor: pointer;
-            object-fit: cover;
-        }
-        label {/* Story Username */
-            font-size: 12px;
-            color: #262626;
-            overflow: hidden;
-            display: block;
-            max-width: 3.6rem;
-            max-height: 1rem;
-            cursor: pointer;
-        }/*** Story Side End ***/
-
-        #side-profile {/*** Right Panel ***/
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        #side-nick {/* Profile Nick */
-            color: #262626;
-            font-size: 14px;
-            cursor: pointer;
-            font-weight: 600;
-
-        }
-        #side-name {/* Profile Name and Surname */
-            font-size: 14px;
-            color: #8e8e8e;
-        }
-        #switch {
-            font-size: 12px;
-            color: #0095f6;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        #suggestion {/* Suggestion For You */
-            font-size: 14px;
-            color: #8e8e8e;
-            font-weight: 600;
-        }
-        #see-all {
-            cursor: pointer;
-            font-size: 12px;
-            color: #262626;
-            font-weight: 600;
-        }
-        #suggestion-photo {/* Account Suggestion Photos */
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            object-fit: cover;
-        }
-        #suggestion-nick {/* Account Suggestion Nick */
-            font-size: 14px;
-            color: #262626;
-            font-weight: 600;
-            text-transform: lowercase;
-        }
-        #suggestion-nick:hover {
-            text-decoration: underline;
-            cursor: pointer
-        }
-        #suggestion-info {/* Followed by | New to IG */
-            color: #8e8e8e;
-            font-size: 12px;
-            margin-top: -4px;
-        }
-        #suggestion-follow {/*** Right Panel End ***/
-            font-size: 12px;
-            color: #0095f6;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        aside{
-            margin-left: 13%;
-        }
-        #post {/*** Main Side ***/
-            width: 614px;
-            height: 768px;
-            object-fit: cover;
-            
-        }
-        #post-nick {/*** Post Owner Nick ***/
-            text-transform: lowercase;
-            font-weight: 600;
-            font-size: 14px;
-            color: #262626;
-        }
-        #post-nick:hover {
-            text-decoration: underline;
-        }
-        #dots {
-            width: 12px;
-            height: 16px;
-            cursor: pointer;
-        }
-        #buttons{
-            fill: #0a0908;
-            margin: 6px;
-            cursor: pointer;
-        }
-        #buttons:last-child {
-            float: right;
-            margin-right: 1rem;
-        }
-        #buttons:first-child {
-            margin-left: 1rem;
-        }
-        h6 {
-            font-weight: 600;
-            font-size: 14px;
-        }
-        h6:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        #subtitle-profile {/* Photo on the likes */
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        #bottom-bar {
-            font-size: 14px;
-        }
-        #show-comments {/* View All Comments */
-            color: #8e8e8e;
-            cursor: pointer;
-        }
-        #comment-like {
-            width: 12px;
-            height: 12px;
-            cursor: pointer;
-        }
-        #time-info {
-            color: #8e8e8e;
-            font-size: 10px;
-        }
-        #icons {/* Emoji */
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-        }
-        #comment-input {
-            color: #262626;
-            font-size: 14px;
-            outline: none;
-            text-align: start;
-        }/*** Main End ***/
-
-        #footer {/*** Footer Start ***/
-            font-size: 11px;
-            color: #c7c7c7;
-            font-family: "Segoe UI" sans-serif;
-
-        }
-        #footer-pages {
-            font-size: 11px;
-            color: #c7c7c7;
-            font-family: "Segoe UI" sans-serif;
-            text-decoration: none; 
-            margin-left: -8px;
-        }
-        #footer-pages:first-child {
-            list-style: none;
-        }
-        #post-profile {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            object-fit: cover;
-        }/*** Footer End ***/
-        #post-profile-story {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            cursor: pointer;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 2px solid rgb(238, 39, 82);
-            padding: 1px;
-        }/*** Footer End ***/
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body">
       <nav class="navbar bg-white fixed-top">
@@ -265,12 +21,12 @@
                     <div class="col-4 mt-2 ps-5"><img id="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt=""></div>
                     <div class="col-2 mt-1">
                         <input id="search-bar" class="form-control" type="search" placeholder="Search"></div>
-                    <div class="col-4 offset-1 d-flex align-items-center gap-2">
-                        <button class="nav-item"><svg aria-label="Ana Sayfa" class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"></path></svg></button>
-                        <button class="nav-item"><svg aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M36.2 16.7L29 22.2c-.5.4-1.2.4-1.7 0l-5.4-4c-1.6-1.2-3.9-.8-5 .9l-6.8 10.7c-.7 1 .6 2.2 1.6 1.5l7.3-5.5c.5-.4 1.2-.4 1.7 0l5.4 4c1.6 1.2 3.9.8 5-.9l6.8-10.7c.6-1.1-.7-2.2-1.7-1.5zM24 1C11 1 1 10.5 1 23.3 1 30 3.7 35.8 8.2 39.8c.4.3.6.8.6 1.3l.2 4.1c0 1 .9 1.8 1.8 1.8.2 0 .5 0 .7-.2l4.6-2c.2-.1.5-.2.7-.2.2 0 .3 0 .5.1 2.1.6 4.3.9 6.7.9 13 0 23-9.5 23-22.3S37 1 24 1zm0 41.6c-2 0-4-.3-5.9-.8-.4-.1-.8-.2-1.3-.2-.7 0-1.3.1-2 .4l-3 1.3V41c0-1.3-.6-2.5-1.6-3.4C6.2 34 4 28.9 4 23.3 4 12.3 12.6 4 24 4s20 8.3 20 19.3-8.6 19.3-20 19.3z"></path></svg></button>
-                        <button class="nav-item"><svg aria-label="Yeni Gönderi" class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M31.8 48H16.2c-6.6 0-9.6-1.6-12.1-4C1.6 41.4 0 38.4 0 31.8V16.2C0 9.6 1.6 6.6 4 4.1 6.6 1.6 9.6 0 16.2 0h15.6c6.6 0 9.6 1.6 12.1 4C46.4 6.6 48 9.6 48 16.2v15.6c0 6.6-1.6 9.6-4 12.1-2.6 2.5-5.6 4.1-12.2 4.1zM16.2 3C10 3 7.8 4.6 6.1 6.2 4.6 7.8 3 10 3 16.2v15.6c0 6.2 1.6 8.4 3.2 10.1 1.6 1.6 3.8 3.1 10 3.1h15.6c6.2 0 8.4-1.6 10.1-3.2 1.6-1.6 3.1-3.8 3.1-10V16.2c0-6.2-1.6-8.4-3.2-10.1C40.2 4.6 38 3 31.8 3H16.2z"></path><path d="M36.3 25.5H11.7c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h24.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z"></path><path d="M24 37.8c-.8 0-1.5-.7-1.5-1.5V11.7c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v24.6c0 .8-.7 1.5-1.5 1.5z"></path></svg></button>
-                        <button class="nav-item"><svg aria-label="Kişiler Bul" class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path clip-rule="evenodd" d="M24 0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24S37.2 0 24 0zm0 45C12.4 45 3 35.6 3 24S12.4 3 24 3s21 9.4 21 21-9.4 21-21 21zm10.2-33.2l-14.8 7c-.3.1-.6.4-.7.7l-7 14.8c-.3.6-.2 1.3.3 1.7.3.3.7.4 1.1.4.2 0 .4 0 .6-.1l14.8-7c.3-.1.6-.4.7-.7l7-14.8c.3-.6.2-1.3-.3-1.7-.4-.5-1.1-.6-1.7-.3zm-7.4 15l-5.5-5.5 10.5-5-5 10.5z" fill-rule="evenodd"></path></svg></button>
-                        <button class="nav-item"><svg aria-label="Hareket Akışı" class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path></svg></button>
+                    <div id="nav-buttons" class="col-4 offset-1 d-flex align-items-center gap-2">
+                        <button class="nav-item"><svg class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"></path></svg></button>
+                        <button class="nav-item"><svg class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M36.2 16.7L29 22.2c-.5.4-1.2.4-1.7 0l-5.4-4c-1.6-1.2-3.9-.8-5 .9l-6.8 10.7c-.7 1 .6 2.2 1.6 1.5l7.3-5.5c.5-.4 1.2-.4 1.7 0l5.4 4c1.6 1.2 3.9.8 5-.9l6.8-10.7c.6-1.1-.7-2.2-1.7-1.5zM24 1C11 1 1 10.5 1 23.3 1 30 3.7 35.8 8.2 39.8c.4.3.6.8.6 1.3l.2 4.1c0 1 .9 1.8 1.8 1.8.2 0 .5 0 .7-.2l4.6-2c.2-.1.5-.2.7-.2.2 0 .3 0 .5.1 2.1.6 4.3.9 6.7.9 13 0 23-9.5 23-22.3S37 1 24 1zm0 41.6c-2 0-4-.3-5.9-.8-.4-.1-.8-.2-1.3-.2-.7 0-1.3.1-2 .4l-3 1.3V41c0-1.3-.6-2.5-1.6-3.4C6.2 34 4 28.9 4 23.3 4 12.3 12.6 4 24 4s20 8.3 20 19.3-8.6 19.3-20 19.3z"></path></svg></button>
+                        <button class="nav-item"><svg class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M31.8 48H16.2c-6.6 0-9.6-1.6-12.1-4C1.6 41.4 0 38.4 0 31.8V16.2C0 9.6 1.6 6.6 4 4.1 6.6 1.6 9.6 0 16.2 0h15.6c6.6 0 9.6 1.6 12.1 4C46.4 6.6 48 9.6 48 16.2v15.6c0 6.6-1.6 9.6-4 12.1-2.6 2.5-5.6 4.1-12.2 4.1zM16.2 3C10 3 7.8 4.6 6.1 6.2 4.6 7.8 3 10 3 16.2v15.6c0 6.2 1.6 8.4 3.2 10.1 1.6 1.6 3.8 3.1 10 3.1h15.6c6.2 0 8.4-1.6 10.1-3.2 1.6-1.6 3.1-3.8 3.1-10V16.2c0-6.2-1.6-8.4-3.2-10.1C40.2 4.6 38 3 31.8 3H16.2z"></path><path d="M36.3 25.5H11.7c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h24.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z"></path><path d="M24 37.8c-.8 0-1.5-.7-1.5-1.5V11.7c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v24.6c0 .8-.7 1.5-1.5 1.5z"></path></svg></button>
+                        <button class="nav-item"><svg class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path clip-rule="evenodd" d="M24 0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24S37.2 0 24 0zm0 45C12.4 45 3 35.6 3 24S12.4 3 24 3s21 9.4 21 21-9.4 21-21 21zm10.2-33.2l-14.8 7c-.3.1-.6.4-.7.7l-7 14.8c-.3.6-.2 1.3.3 1.7.3.3.7.4 1.1.4.2 0 .4 0 .6-.1l14.8-7c.3-.1.6-.4.7-.7l7-14.8c.3-.6.2-1.3-.3-1.7-.4-.5-1.1-.6-1.7-.3zm-7.4 15l-5.5-5.5 10.5-5-5 10.5z" fill-rule="evenodd"></path></svg></button>
+                        <button class="nav-item"><svg class="_8-yf5 " color="#262626" fill="#262626" height="22" role="img" viewBox="0 0 48 48" width="22"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path></svg></button>
                         <img class="ms-2" id="profile" src="https://images.pexels.com/photos/3748221/pexels-photo-3748221.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                     </div>
                 </div>
@@ -278,7 +34,7 @@
       </nav>
       <main class="container">
         <div class="row">
-            <aside class="col-md-6">
+            <aside class="col-xl-6">
                 <div id="storySide" class="border col-md-12 p-3 bg-white">
                       <ul class="list-unstyled d-flex mt-1 mb-0">
                           <li class="col">
@@ -311,9 +67,9 @@
                           </li>
                       </ul>
                 </div>
-                <section class=" border p-0 mt-4 bg-white" >
+                <section class="border p-0 mt-4 bg-white" >
                     <article class="bg-white">
-                        <div class="p-3">
+                        <div id="post-top-bar" class="p-3">
                             <img id="post-profile-story"src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
                             <label class="d-inline ps-2" for=""><span id="post-nick">williamanderson7</span></label>
                             <span class="d-flex float-end"><img  id="dots" src="https://cdn-icons-png.flaticon.com/512/512/512142.png" alt=""></span>
@@ -362,7 +118,7 @@
                 </section>
                 <section class=" border p-0 mt-4 bg-white " >
                     <article class="bg-white">
-                        <div class="p-3">
+                        <div id="post-top-bar" class="p-3">
                             <img id="post-profile"src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                             <label class="d-inline ps-2" for=""><span id="post-nick">juliandouglas</span></label>
                             <span class="d-flex float-end"><img  id="dots" src="https://cdn-icons-png.flaticon.com/512/512/512142.png" alt=""></span>
@@ -411,22 +167,21 @@
                 </section>
             </aside>
             
-            <div class="col-md-4 p-2 mt-5 d-none d-lg-block">
+            <div class="col-xl-2 col-lg-3 p-2 mt-5 d-none d-lg-block">
                 <div class="position-fixed mt-4">
                     <div class="d-flex"> 
                         <img class="border mt-2" id="side-profile" src="https://images.pexels.com/photos/3748221/pexels-photo-3748221.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                         <div class="d-inline-block mt-3 ms-3 lh-1 ">
                             <h6 id="side-nick">johndoe</h6>
                             <p id="side-name">John Doe</p>
-        
                         </div>
                         <div class="d-flex mt-4 ms-auto">
                             <p id="switch">Switch</p>
                         </div>
                     </div>
                     <div class="d-flex mt-4">
-                        <p id="suggestion" class="me-auto">Suggestions For You</p>
-                        <p id="see-all" class="ps-5 ms-auto">See All</p>
+                        <p id="suggestion">Suggestions For You</p>
+                        <p id="see-all" class="ms-auto">See All</p>
                     </div>
                     <div>
                         <ul class="list-unstyled">
@@ -436,7 +191,6 @@
                                     <div class="lh-1 ms-2">
                                         <h6 id="suggestion-nick">sophia-taylor</h6>
                                         <p id="suggestion-info">Followed by samuel_shaw</p>
-                                        
                                     </div>
                                     
                                 </div>
@@ -448,7 +202,6 @@
                                     <div class="lh-1 ms-2">
                                         <h6 id="suggestion-nick">michealclark</h6>
                                         <p id="suggestion-info">Followed by matthew.h1ll</p>
-                                        
                                     </div>
                                 </div>
                                 <div class="d-inline-block"><p id="suggestion-follow" class="col">Follow</p></div>
@@ -459,7 +212,6 @@
                                     <div class="lh-1 ms-2">
                                         <h6 id="suggestion-nick">joseph1ross</h6>
                                         <p id="suggestion-info">Followed by juliandouglas</p>
-                                        
                                     </div>
                                 </div>
                                 <div class="d-inline-block"><p id="suggestion-follow" class="col">Follow</p></div>
@@ -470,7 +222,6 @@
                                     <div class="lh-1 ms-2">
                                         <h6 id="suggestion-nick">hazel.morrison</h6>
                                         <p id="suggestion-info">Followed by dylanmartin</p>
-                                        
                                     </div>
                                 </div>
                                 <div class="d-flex"><p id="suggestion-follow" class="col">Follow</p></div>
@@ -481,7 +232,6 @@
                                     <div class="lh-1 ms-2">
                                         <h6 id="suggestion-nick">gabri3lmartin</h6>
                                         <p id="suggestion-info">Followed by christopher_black</p>
-                                        
                                     </div>
                                 </div>
                                 <div class="d-flex"><p id="suggestion-follow" class="col">Follow</p></div>
@@ -505,7 +255,6 @@
                         <li  class="me-3"><a id="footer-pages" href="">Language</a></li>
                         </ul>  
                         <p id="footer">© 2021 INSTAGRAM FROM FACEBOOK</p>
-                        
                     </footer>
                 </div>
                 
