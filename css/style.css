@@ -261,6 +261,24 @@ h6:hover {
         padding: 8px 1rem !important;
     }
 }
+@media only screen and (max-width: 1000px){
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container div {
+    margin: 0;
+}
+#logo {
+    margin: 0;
+    padding: 0;
+}
+#nav-buttons {
+    margin-left: 0;
+}
+
+}
 @media only screen and (max-width: 500px){
     .navbar {
         display: none;
@@ -317,6 +335,10 @@ h6:hover {
         padding: 0 !important;
     }
     #post-top-bar {
+        margin: 0 1rem;
+    }
+    #bottom-bar {
+        font-size: 14px;
         margin: 0 1rem;
     }
 }
