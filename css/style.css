@@ -148,10 +148,7 @@ aside{
     text-decoration: underline;
 }
 #dots {
-    width: 12px;
-    height: 16px;
     cursor: pointer;
-    margin-top: 100%;
 }
 #buttons{
     fill: #0a0908;
@@ -232,8 +229,8 @@ h6:hover {
     object-fit: cover;
 }/*** Footer End ***/
 #post-profile-story {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
@@ -241,6 +238,18 @@ h6:hover {
     border: 2px solid rgb(238, 39, 82);
     padding: 1px;
 }/*** Footer End ***/
+#mobile-top-nav {
+    display: none;
+}
+#mobile-storySide {
+    display: none;
+}
+#post-side-mobile {
+    display: none;
+}
+#mobile-bottom-nav {
+    display: none;
+}
 @media only screen and (max-width:1200px){
     #logo {/* Instagram Logo */
         margin-left: 1rem;
@@ -250,5 +259,64 @@ h6:hover {
     }
     #post-top-bar{
         padding: 8px 1rem !important;
+    }
+}
+@media only screen and (max-width: 500px){
+    .navbar {
+        display: none;
+    }
+    #mobile-top-nav {
+        display: flex;
+        height: 48px;
+    }
+    #logo {
+        margin-left: 0;
+    }
+    #storySide {
+        display: none;
+    }
+    #mobile-storySide{
+        display: flex;
+        overflow: scroll;
+    }
+    aside {
+        margin: 0;
+        padding: 0 !important;
+    }
+    #story-photo {
+        padding: 1.6px;
+    }
+    #mobile-storySide ul li{
+        margin: 0 8px;
+    }
+    #story-photo-noBorder{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: none;
+        padding: 1px;
+        cursor: pointer;
+        object-fit: cover;
+    }
+    #plus {
+        border-radius: 50%;
+        margin-left: -1.2rem;
+        margin-top: 72%;
+        border: 0.2px solid white;
+    }
+    #post-side {
+        display: none;
+    }
+    #post-side-mobile {
+        display: flex;
+    }
+    #mobile-bottom-nav {
+        display: flex;
+    }
+    main {
+        padding: 0 !important;
+    }
+    #post-top-bar {
+        margin: 0 1rem;
     }
 }
