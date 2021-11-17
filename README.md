@@ -20,7 +20,7 @@
 
 ---
 
-<h4 align="center">375x812 Screen Size</h4>
+<h4 align="center">360x800 Screen Size</h4>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/thenesern/Instagram-Clone/master/images/360x800/1.png" />
