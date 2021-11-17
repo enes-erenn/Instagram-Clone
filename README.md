@@ -1,5 +1,5 @@
 <h1 align="center">Instagram Clone</h1>
-<h3 align="center">I made a Instagram Clone just using HTML-CSS.</h3>
+<h3 align="center">I made a Instagram Clone just using HTML-CSS and BootStrap.</h3>
 <p align="center">This clone has responsive design.</p>
 
 ---
