@@ -12,13 +12,20 @@ body {/*** General Settings ***/
     text-align: center;
     font-size: 14px;
 }
-nav {/*** Nav Bar Start ***/
+nav{/*** Nav Bar Start ***/
     height: 54px;
     border-bottom: 1px solid rgb(219,219,219);
 }
-#logo {/* Instagram Logo */
+#nav-bar {
+    margin-left: 12%;
+    padding: 0 6px;
+}
+#nav-buttons {
+    padding: 0;
+    justify-content: end;
+}
+#logo {
     cursor: pointer;
-    margin-left: 1.2rem;
 }
 #search-bar {/* Search Input */
     padding: 3px 10px 3px 26px;
@@ -26,7 +33,6 @@ nav {/*** Nav Bar Start ***/
     outline: 0;
     width: 215px;
     height: 28px;
-    padding: 3px 10px 3px 26px;
     background-color: rgb(250,250,250);
     font-family: "Segoe UI" sans-serif;
 }
@@ -34,6 +40,7 @@ nav {/*** Nav Bar Start ***/
     background-color: transparent;
     border: none;
 }
+
 #profile {/* Profile Photo */
     width: 1.4rem;
     height: 1.4rem;
@@ -238,6 +245,8 @@ h6:hover {
     border: 2px solid rgb(238, 39, 82);
     padding: 1px;
 }/*** Footer End ***/
+
+/*** Mobile Elements ***/
 #mobile-top-nav {
     display: none;
 }
@@ -250,95 +259,94 @@ h6:hover {
 #mobile-bottom-nav {
     display: none;
 }
-@media only screen and (max-width:1200px){
-    #logo {/* Instagram Logo */
-        margin-left: 1rem;
-    }
-    #nav-buttons {
-        margin-left: 10%;
-    }
-    #post-top-bar{
-        padding: 8px 1rem !important;
-    }
-}
-@media only screen and (max-width: 1000px){
-.container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.container div {
-    margin: 0;
-}
-#logo {
-    margin: 0;
-    padding: 0;
-}
-#nav-buttons {
-    margin-left: 0;
-}
 
-}
-@media only screen and (max-width: 500px){
-    .navbar {
-        display: none;
+    @media only screen and (max-width: 1400px){
+        #nav-buttons {
+            justify-content: end !important;
+        }
+        .col-9 {
+            width: 79% ;
+        }
     }
-    #mobile-top-nav {
-        display: flex;
-        height: 48px;
+    @media only screen and (max-width: 1200px){
+        .col-9 {
+            width: 75%;
+        }
     }
-    #logo {
-        margin-left: 0;
+    @media only screen and (max-width: 800px){
+        .container, #nav-bar {
+            min-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important; 
+        }
+        #logo {
+            margin-left: 1rem;
+        }
+        #nav-buttons{
+            margin-right: 1rem;
+        }
     }
-    #storySide {
-        display: none;
+
+    @media only screen and (max-width: 500px){
+        .navbar {
+            display: none;
+        }
+        #mobile-top-nav {
+            display: flex;
+            height: 48px;
+        }
+        #logo {
+            margin-left: 0;
+        }
+        #storySide {
+            display: none;
+        }
+        #mobile-storySide{
+            display: flex;
+            overflow: scroll;
+        }
+        aside {
+            margin: 0;
+            padding: 0 !important;
+        }
+        #story-photo {
+            padding: 1.6px;
+        }
+        #mobile-storySide ul li{
+            margin: 0 8px;
+        }
+        #story-photo-noBorder{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: none;
+            padding: 1px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        #plus {
+            border-radius: 50%;
+            margin-left: -1.2rem;
+            margin-top: 72%;
+            border: 0.2px solid white;
+        }
+        #post-side {
+            display: none;
+        }
+        #post-side-mobile {
+            display: flex;
+        }
+        #mobile-bottom-nav {
+            display: flex;
+        }
+        main {
+            padding: 0 !important;
+        }
+        #post-top-bar {
+            margin: 0 1rem;
+        }
+        #bottom-bar {
+            font-size: 14px;
+            margin: 0 1rem;
+        }
     }
-    #mobile-storySide{
-        display: flex;
-        overflow: scroll;
-    }
-    aside {
-        margin: 0;
-        padding: 0 !important;
-    }
-    #story-photo {
-        padding: 1.6px;
-    }
-    #mobile-storySide ul li{
-        margin: 0 8px;
-    }
-    #story-photo-noBorder{
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        border: none;
-        padding: 1px;
-        cursor: pointer;
-        object-fit: cover;
-    }
-    #plus {
-        border-radius: 50%;
-        margin-left: -1.2rem;
-        margin-top: 72%;
-        border: 0.2px solid white;
-    }
-    #post-side {
-        display: none;
-    }
-    #post-side-mobile {
-        display: flex;
-    }
-    #mobile-bottom-nav {
-        display: flex;
-    }
-    main {
-        padding: 0 !important;
-    }
-    #post-top-bar {
-        margin: 0 1rem;
-    }
-    #bottom-bar {
-        font-size: 14px;
-        margin: 0 1rem;
-    }
-}
