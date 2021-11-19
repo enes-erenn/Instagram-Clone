@@ -1,9 +1,11 @@
 <h1 align="center">Instagram Clone</h1>
 <h3 align="center">I made a Instagram Clone just using HTML-CSS and BootStrap.</h3>
 <p align="center">This clone has responsive design.</p>
+
 <p align="center">
-<a align="center" href="https://codepen.io/thenesern/pen/yLowPEQ">CodePen</a>
- </p>
+ <a align="center" href="https://codepen.io/thenesern/pen/yLowPEQ">CodePen</a>
+</p>
+ 
 ---
 
 <h4 align="center">1280x800 Screen Size</h4>
